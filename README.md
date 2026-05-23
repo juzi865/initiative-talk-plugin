@@ -107,11 +107,31 @@
 
 MIT
 
----
+MIT License
+
+Copyright (c) 2026 juzi865
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
 ## 🙏 感谢
 
-本插件参考了麦麦社区“智能分段插件”的优秀设计，采用固定调度器绕过了 RPC 超时限制，让主动发言更稳定。
+本插件参考了麦麦社区“智能分段插件”的优秀设计，采用固定调度器绕过了 RPC 超时限制，让主动发言更稳定。本插件目前仍然有些不稳定性，欢迎大家前来询问和解决。作者本身编程能力不强，也希望有大佬可以完善这个插件，本插件灵感来自于mai_only_you，同时也吸收了相关大佬的指点，感谢大家的支持！
 
 **Enjoy your chat with MaiBot!** 🎉
 
