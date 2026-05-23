@@ -1,0 +1,34 @@
+{
+  "manifest_version": 2,
+  "id": "com.yourname.initiative-talk",
+  "name": "主动发言与回复",
+  "version": "1.0.0",
+  "description": "定时主动发言，基于LLM生成话题",
+  "author": {
+    "name": "juzi865",
+    "url": "https://github.com/juzi865"
+  },
+  "license": "MIT",
+  "urls": {
+    "repository": "https://github.com/juzi865/initiative-talk",
+    "homepage": "https://github.com/juzi865/initiative-talk"
+  },
+  "host_application": {
+    "min_version": "1.0.0",
+    "max_version": "1.0.0"
+  },
+  "sdk": {
+    "min_version": "1.0.0",
+    "max_version": "2.99.99"
+  },
+  "capabilities": [
+    "send.text",
+    "llm.generate",
+    "config.get"
+  ],
+  "i18n": {
+    "default_locale": "zh-CN",
+    "supported_locales": ["zh-CN"]
+  },
+  "dependencies": []
+}
