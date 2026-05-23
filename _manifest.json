@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "id": "com.yourname.initiative-talk",
+  "id": "com.juzi865.initiative-talk-plugin",
   "name": "主动发言与回复",
   "version": "1.0.0",
   "description": "定时主动发言，基于LLM生成话题",
@@ -10,8 +10,8 @@
   },
   "license": "MIT",
   "urls": {
-    "repository": "https://github.com/juzi865/initiative-talk",
-    "homepage": "https://github.com/juzi865/initiative-talk"
+    "repository": "https://github.com/juzi865/initiative-talk-plugin",
+    "homepage": "https://github.com/juzi865/initiative-talk-plugin"
   },
   "host_application": {
     "min_version": "1.0.0",
