@@ -10,7 +10,7 @@
   },
   "license": "MIT",
   "urls": {
-    "repository": "https://github.com/juzi865/initiative-talk-plugin/plugin-repo",
+    "repository": "https://github.com/juzi865/initiative-talk-plugin",
     "homepage": "https://github.com/juzi865/initiative-talk-plugin"
   },
   "host_application": {
