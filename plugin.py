@@ -62,25 +62,14 @@ class InitiativeTalkPlugin(MaiBotPlugin):
     # ------------------------------------------------------------------
     # 辅助方法：获取 Bot 人格
     # ------------------------------------------------------------------
-    def _get_bot_persona(self) -> str:
-        """获取 Bot 的人格设定（优先使用配置，其次尝试从 ctx 获取）"""
-        # 方法1：从麦麦全局配置中读取 persona
+    async def _get_bot_persona(self) -> str:
+        """获取 Bot 的人格设定（从全局配置中读取 personality.personality）"""
         try:
-            # 常见路径：self.ctx.config.get("persona", "")
-            persona = self.ctx.config.get("persona", "")
-            if persona:
-                return persona
-        except Exception:
-            pass
-
-        # 方法2：尝试从 ctx.get_persona() 获取（如果 SDK 提供了）
-        if hasattr(self.ctx, "get_persona"):
-            try:
-                persona = self.ctx.get_persona()
-                if persona:
-                    return persona
-            except Exception:
-                pass
+            persona = await self.ctx.config.get("personality.personality", "")
+            if persona and persona.strip():
+                return persona.strip()
+        except Exception as e:
+            self.ctx.logger.warning(f"获取 Bot 人格配置失败: {e}")
 
         # 默认人格
         return "你是一个热心的群友，性格开朗，喜欢和大家聊天"
@@ -135,9 +124,8 @@ class InitiativeTalkPlugin(MaiBotPlugin):
     async def _initiate_chat(self, stream_id: str):
         """向指定会话发起一次主动发言（感知人格和上下文，支持重试和自定义超时）"""
         # 1. 获取 Bot 人格
-        persona = self._get_bot_persona() if self.config.plugin.use_persona else ""
-        persona_part = f"你是{persona}。" if persona else ""
-
+        persona = await self._get_bot_persona() if self.config.plugin.use_persona else ""
+        persona_part = persona if persona else ""
         # 2. 获取近期聊天记录（如果配置数量 > 0）
         context_part = ""
         context_limit = self.config.plugin.context_messages
